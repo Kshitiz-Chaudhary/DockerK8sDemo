@@ -1,0 +1,32 @@
+{
+  "name": "api",
+  "version": "1.0.0",
+  "description": "Sample API for AFS cloud workshop",
+  "main": "app.js",
+  "scripts": {
+    "test": "index"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alekseigurba/afs-demo-apps.git"
+  },
+  "keywords": [
+    "api"
+  ],
+  "author": "Arvato Financial Solutions",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alekseigurba/afs-demo-apps/issues"
+  },
+  "homepage": "https://github.com/alekseigurba/afs-demo-apps#readme",
+  "dependencies": {
+    "cors": "^2.8.4",
+    "express": "^4.16.3",
+    "jsonwebtoken": "^8.3.0",
+    "mongoose": "^5.2.3"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.1"
+  },
+  "start": "nodemon server.js"
+}

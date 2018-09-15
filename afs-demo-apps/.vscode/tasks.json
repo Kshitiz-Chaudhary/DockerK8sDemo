@@ -1,0 +1,27 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "type": "npm",
+            "script": "install",
+            "path": "${workspaceFolder}/api",
+        },
+        {
+            "type": "npm",
+            "script": "test",
+            "path": "${workspaceFolder}/api",
+        },
+        {
+            "label": "build",
+            "command": "dotnet",
+            "type": "process",
+            "args": [
+                "build",
+                "${workspaceFolder}/id/id_service.csproj"
+            ],
+            "problemMatcher": "$msCompile"
+        } 
+    ]
+}

@@ -1,0 +1,20 @@
+[
+    {
+        "username": "admin",
+        "name": "",
+        "roles": [ "admin", "contributor", "reader" ],
+        "password_hash" : "05FF5874F9F5A23CEA0BDF9A790D9B0C2F026F28CBB4E8F72EBEBE8F5B7070E2"
+    },
+    {
+        "username": "bruce",
+        "name": "Caitlyn Jenner",
+        "roles": [ "reader" ],
+        "password_hash" : "05FF5874F9F5A23CEA0BDF9A790D9B0C2F026F28CBB4E8F72EBEBE8F5B7070E2"
+    },
+    {
+        "username": "kerkoroff",
+        "name": "Philipp Kirkorov",
+        "roles": [ "contributor", "reader" ],
+        "password_hash" : "05FF5874F9F5A23CEA0BDF9A790D9B0C2F026F28CBB4E8F72EBEBE8F5B7070E2"
+    }
+]

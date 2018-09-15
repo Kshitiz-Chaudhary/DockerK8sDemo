@@ -1,0 +1,44 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="index.css">
+    <script src="vue.js"></script>
+    <script src="axios.min.js"></script>
+  </head>
+  <body>
+    <div id="app">
+      <div id="header">
+        <H1>Cloud workshop app</H1>
+        Login with username and password, then click "Account" to view account settings.
+        <p><span>ID URL: </span><input v-model="id_url"></p>
+        <p><span>API URL: </span><input v-model="api_url"></p>
+      </div>
+
+      <div id="login">
+        <p>username: <input v-model="username"></p>
+        <p>password: <input v-model="password"></p>
+        <button v-on:click="login">Login</button>
+
+        <div id="login_examples">
+          Examples:<br/>
+          - admin:Qwerty!23<br/>
+          - bruce:Qwerty!23<br/>
+          - kerkoroff:Qwerty!23<br/>
+        </div>
+        
+        <div id="login_status">
+          <p>status: {{ status }}</p>
+          token:
+          <div id="token">{{ token }}</div>
+        </div>
+      </div>
+
+      <div id="account_details">
+        <p>username: <input v-model="acc_username"></p>
+        <button v-on:click="getAccount">Get user account</button>
+        <div id="accountInfo">{{ account }}</div>
+      </div>
+    </div>
+      
+    <script src="index.js"></script>
+  </body>
+</html>

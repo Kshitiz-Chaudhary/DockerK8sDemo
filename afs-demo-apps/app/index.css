@@ -1,0 +1,48 @@
+body {
+    background-color: rgb(229, 241, 245);
+    margin: auto;
+    padding-left: 10%; padding-right: 10%;
+}
+
+span {
+    display: inline-block;
+    width: 100px;
+  }
+
+div {
+    margin: 10px; padding: 10px;
+}
+
+#app {
+    width: 800px; height: 100%;
+}
+
+#header {
+    height: auto;
+    background-color: rgb(211, 221, 224);
+}
+
+#login {
+    float: left; width: 45%; height: 700px;
+    background-color: rgb(211, 221, 224);
+}
+
+#account_details {
+    float: right; width: 45%; height: 700px;
+    background-color: rgb(211, 221, 224);
+}
+
+#login_examples {
+    color: gray;
+}
+
+#login_status {
+    font-weight: bold;
+}
+
+#token {
+    padding: 0px; margin: 0px;
+    font-weight: normal;
+    width: 320px; height: auto;
+    word-break: break-all;
+}

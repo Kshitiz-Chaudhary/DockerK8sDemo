@@ -1,0 +1,41 @@
+
+// Windows host
+setx HTTP_PROXY "http://10.128.61.8:9090" /M
+setx HTTPS_PROXY "http://10.128.61.8:9090" /M
+setx NO_PROXY "localhost,127.0.0.1,10.30.111.206,10.30.111.240" /M
+setx NO_PROXY "localhost,127.0.0.1,10.30." /M
+
+export http_proxy=http://10.128.61.8:9090
+export https_proxy=http://10.128.61.8:9090
+
+// download manually to
+
+// install dir
+https://chocolatey.org/install.ps1
+
+// c:\Users\gurb011\.minikube\cache\iso\
+https://storage.googleapis.com/minikube/iso/minikube-v0.28.0.iso
+
+// c:\Users\gurb011\.minikube\cache\v1.10.0\
+https://storage.googleapis.com/kubernetes-release/release/v1.10.0/bin/linux/amd64/kubelet
+https://storage.googleapis.com/kubernetes-release/release/v1.10.0/bin/linux/amd64/kubeadm
+
+
+// Important! Restart docker
+
+// start minikube
+minikube delete
+minikube start --vm-driver="hyperv" --memory=4096 --hyperv-virtual-switch="minikube" --v=10 --alsologtostderr --docker-env http_proxy=http://10.128.61.8:9090 --docker-env https_proxy=http://10.128.61.8:9090
+
+// extra options
+--kubernetes-version=v1.9.4
+--v=7
+--iso-url "https://storage.googleapis.com/minikube/iso/minikube-v0.28.0.iso"
+minikube start --vm-driver="hyperv" --memory=4096 --hyperv-virtual-switch="minikube" --v=7 --alsologtostderr --docker-env http_proxy=http://10.128.61.8:9090 --docker-env https_proxy=http://10.128.61.8:9090
+
+
+
+kubectl create -f https://raw.githubusercontent.com/kubernetes/dashboard/master/src/deploy/recommended/kubernetes-dashboard.yaml
+kubectl create -f https://raw.githubusercontent.com/kubernetes/heapster/master/deploy/kube-config/influxdb/influxdb.yaml
+kubectl create -f https://raw.githubusercontent.com/kubernetes/heapster/master/deploy/kube-config/influxdb/heapster.yaml 
+kubectl create -f https://raw.githubusercontent.com/kubernetes/heapster/master/deploy/kube-config/influxdb/grafana.yaml
